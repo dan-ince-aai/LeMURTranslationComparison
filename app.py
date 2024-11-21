@@ -118,7 +118,7 @@ def main():
                 st.subheader("📝 Original Transcript")
                 with st.spinner("Transcribing audio file..."):
                     try:
-                        transcript = aai.Transcriber().transcribe(uploaded_file)
+                        transcript = aai.Transcriber().transcribe(uploaded_file, language_code=original_language_code)
                         st.text_area("Transcribed Text:", value=transcript.text, height=400)
                         st.success("✅ Transcription completed!")
                     except Exception as e:
