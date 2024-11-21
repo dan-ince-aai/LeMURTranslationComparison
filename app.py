@@ -20,7 +20,6 @@ def process_llm_translation(transcript, original_language, target_language):
         prompt = (
             f"Translate the following text from {original_language} to {target_language} with exceptional accuracy. Do not include any preamble."
         )
-        print(prompt)
         result = transcript.lemur.task(
             prompt=prompt,
             final_model=aai.LemurModel.claude3_haiku,
